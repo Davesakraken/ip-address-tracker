@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
-import "leaflet/dist/leaflet.css";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
 
 export default function Map() {
   const [isClient, setIsClient] = useState(false);
   useEffect(() => {
     setIsClient(true);
   }, []);
+
   return isClient ? (
     <MapContainer center={[51.505, -0.09]} zoom={15} scrollWheelZoom={false}>
       <TileLayer

@@ -2,14 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    height: 100vh;
-    font-family: 'Rubik', sans-serif;
-}
-
 :root {
     --DarkGray: hsl(0, 0%, 17%);
     --Gray: hsl(0, 0%, 59%);
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+}
+
+header {
+    z-index: 401;
 }
 
 h1 {
@@ -41,5 +44,4 @@ input {
 
 .leaflet-container {
     height: 100%;
-    z-index: -1;
 }
