@@ -1,4 +1,4 @@
-import { IconArrowSvg } from "@/pages/components/svgs";
+import { IconArrowSvg } from "@/components/svgs";
 
 export default function SearchBar() {
   return (

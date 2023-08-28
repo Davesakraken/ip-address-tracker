@@ -1,8 +1,8 @@
 import Head from "next/head";
 import dynamic from "next/dynamic";
-import SearchBar from "@/pages/components/SearchBar";
-import ResultsPanel from "@/pages/components/ResultsPanel";
-const Map = dynamic(() => import("@/pages/components/Map"), {
+import SearchBar from "@/components/SearchBar";
+import ResultsPanel from "@/components/ResultsPanel";
+const Map = dynamic(() => import("@/components/Map"), {
   ssr: false,
 });
 
