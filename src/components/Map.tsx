@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import { MapContainer, TileLayer, Popup, Marker } from "react-leaflet";
+import { MapContainer, TileLayer, Popup, Marker, useMap } from "react-leaflet";
 import MarkerIcon from "leaflet/dist/images/marker-icon.png";
 import MarkerIconRetina from "leaflet/dist/images/marker-icon-2x.png";
 import MarkerShadow from "leaflet/dist/images/marker-shadow.png";
 import { Icon } from "leaflet";
 import "leaflet/dist/leaflet.css";
+import { useIpSearch } from "@/hooks/ipSearchContext";
 
 const icon = new Icon({
   iconUrl: MarkerIcon.src,
@@ -17,23 +18,37 @@ const icon = new Icon({
   shadowSize: [41, 41],
 });
 
+// proxy component. Needs to be within the mapContainer provider below to run as useMap is a hook only avilable within that context.
+function MapControl({ lat, lon }: { lat: number; lon: number }) {
+  const map = useMap();
+
+  useEffect(() => {
+    map.setView([lat, lon]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [lat, lon]);
+  return null;
+}
+
 export default function Map() {
+  const { ipResults } = useIpSearch();
   const [isClient, setIsClient] = useState(false);
   useEffect(() => {
     setIsClient(true);
   }, []);
 
   return isClient ? (
-    <MapContainer center={[51.505, -0.09]} zoom={15} scrollWheelZoom={false}>
+    <MapContainer center={[ipResults.lat, ipResults.lon]} zoom={15} scrollWheelZoom={false}>
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        // url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        url="https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png"
       />
-      <Marker position={[51.505, -0.09]} icon={icon}>
+      <Marker position={[ipResults.lat, ipResults.lon]} icon={icon}>
         <Popup>
           A pretty CSS3 popup. <br /> Easily customizable.
         </Popup>
       </Marker>
+      <MapControl lat={ipResults.lat} lon={ipResults.lon} />
     </MapContainer>
   ) : null;
 }
