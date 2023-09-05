@@ -14,7 +14,7 @@ export interface FetchLocationDataInterface {
 }
 
 export async function FetchLocationData(ip: string) {
-  const ipApiUrl = `//ip-api.com/json/${ip}?fields=status,country,region,city,district,lat,lon,timezone,isp,query`;
+  const ipApiUrl = `http://ip-api.com/json/${ip}?fields=status,country,region,city,district,lat,lon,timezone,isp,query`;
 
   const response = await fetch(ipApiUrl);
   const ipDetails = await response.json();
