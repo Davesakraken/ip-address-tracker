@@ -5,6 +5,8 @@ const config: Config = {
   theme: {
     screens: {
       lg: "1150px",
+      md: "661px",
+      sm: "360px",
     },
     extend: {
       backgroundImage: {
