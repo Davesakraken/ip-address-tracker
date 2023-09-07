@@ -37,18 +37,20 @@ export default function Map() {
   }, []);
 
   return isClient ? (
-    <MapContainer center={[ipResults.lat, ipResults.lon]} zoom={15} scrollWheelZoom={false}>
+    <MapContainer
+      center={[ipResults.latitude, ipResults.longitude]}
+      zoom={15}
+      scrollWheelZoom={false}
+      doubleClickZoom={false}
+      dragging={false}
+    >
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         // url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         url="https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png"
       />
-      <Marker position={[ipResults.lat, ipResults.lon]} icon={icon}>
-        <Popup>
-          A pretty CSS3 popup. <br /> Easily customizable.
-        </Popup>
-      </Marker>
-      <MapControl lat={ipResults.lat} lon={ipResults.lon} />
+      <Marker position={[ipResults.latitude, ipResults.longitude]} icon={icon}></Marker>
+      <MapControl lat={ipResults.latitude} lon={ipResults.longitude} />
     </MapContainer>
   ) : null;
 }

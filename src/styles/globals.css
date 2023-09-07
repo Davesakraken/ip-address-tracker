@@ -16,10 +16,10 @@ header {
 }
 
 h1 {
+    font-size: 2rem;
     font-family: 'Rubik', sans-serif;
     font-weight: 500;
     color: white;
-    font-size: 2rem;
 }
 
 h2 {
@@ -30,7 +30,7 @@ h2 {
 }
 
 p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 500;
     color: var(--DarkGray);
 }
