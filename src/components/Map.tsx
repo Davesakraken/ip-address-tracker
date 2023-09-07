@@ -43,6 +43,7 @@ export default function Map() {
       scrollWheelZoom={false}
       doubleClickZoom={false}
       dragging={false}
+      zoomControl={false}
     >
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

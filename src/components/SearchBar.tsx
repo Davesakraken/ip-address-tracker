@@ -5,9 +5,9 @@ export default function SearchBar() {
   const { search, setSearch, handleApiCall } = useIpSearch();
 
   return (
-    <section className="flex h-12 rounded-lg overflow-clip">
+    <section className="flex h-12 rounded-xl overflow-clip">
       <input
-        className="w-[30rem] p-4"
+        className="w-[17rem] p-4 lg:w-[30rem]"
         type="text"
         placeholder="Search for any IP address or domain"
         value={search}

@@ -66,7 +66,7 @@ export function IpSearchProvider({ children }: PropsWithChildren) {
   const handleApiCall = async () => {
     const data = await FetchLocationData(search);
     console.log("Data:", data);
-    if (!data) {
+    if (!data.latitude) {
       alert("invalid ip address");
     } else {
       setIpResults(data);
