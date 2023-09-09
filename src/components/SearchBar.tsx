@@ -4,6 +4,15 @@ import { useIpSearch } from "@/hooks/ipSearchContext";
 export default function SearchBar() {
   const { search, setSearch, handleApiCall } = useIpSearch();
 
+  const HandleClick = () => {
+    if (!search) {
+      alert("please provide an ip");
+      return;
+    } else {
+      handleApiCall();
+    }
+  };
+
   return (
     <section className="flex h-12 rounded-xl overflow-clip">
       <input
@@ -15,7 +24,7 @@ export default function SearchBar() {
           setSearch(e.currentTarget.value);
         }}
       />
-      <button onClick={handleApiCall} className="w-12 flex justify-center items-center bg-black" type="submit">
+      <button onClick={HandleClick} className="w-12 flex justify-center items-center bg-black" type="submit">
         <IconArrowSvg />
       </button>
     </section>
