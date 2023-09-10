@@ -38,7 +38,7 @@ export default function Map() {
 
   return isClient ? (
     <MapContainer
-      center={[ipResults.latitude, ipResults.longitude]}
+      center={[ipResults.location.lat, ipResults.location.lng]}
       zoom={15}
       scrollWheelZoom={false}
       doubleClickZoom={false}
@@ -50,8 +50,8 @@ export default function Map() {
         // url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         url="https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png"
       />
-      <Marker position={[ipResults.latitude, ipResults.longitude]} icon={icon}></Marker>
-      <MapControl lat={ipResults.latitude} lon={ipResults.longitude} />
+      <Marker position={[ipResults.location.lat, ipResults.location.lng]} icon={icon}></Marker>
+      <MapControl lat={ipResults.location.lat} lon={ipResults.location.lng} />
     </MapContainer>
   ) : null;
 }

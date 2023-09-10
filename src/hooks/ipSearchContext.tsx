@@ -30,12 +30,14 @@ export function IpSearchProvider({ children }: PropsWithChildren) {
   this is imported from the ipApi.ts file */
   const [ipResults, setIpResults] = useState<FetchLocationDataInterface>({
     ip: "93.180.236.143",
-    city: "Mountain View",
-    region: "California",
-    latitude: 37.386,
-    longitude: -122.0838,
-    timezone: "America/Los_Angeles",
-    org: "Google LLC",
+    location: {
+      region: "California",
+      city: "Mountain View",
+      lat: 37.386,
+      lng: -122.0838,
+      timezone: "-07:00",
+    },
+    isp: "Google LLC",
   });
 
   useEffect(() => {
@@ -47,8 +49,8 @@ export function IpSearchProvider({ children }: PropsWithChildren) {
   const handleApiCall = async () => {
     const data = await FetchLocationData(search);
     console.log("Data:", data);
-    if (data.error) {
-      alert("invalid ip address");
+    if (data.code) {
+      alert("input correct domain or ip address");
     } else {
       setIpResults(data);
     }

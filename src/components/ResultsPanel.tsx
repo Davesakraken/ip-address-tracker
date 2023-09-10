@@ -20,15 +20,15 @@ export default function ResultsPanel() {
         </div>
         <div className="flex flex-col text-center w-60 lg:pr-5 lg:border-r lg:text-start">
           <h2>LOCATION</h2>
-          <p>{`${ipResults.city}, ${ipResults.region}`}</p>
+          <p>{`${ipResults.location.city}, ${ipResults.location.region}`}</p>
         </div>
         <div className="flex flex-col text-center w-60 lg:border-r lg:text-start">
           <h2>TIMEZONE</h2>
-          <p>{ipResults.timezone}</p>
+          <p>{ipResults.location.timezone}</p>
         </div>
         <div className="flex flex-col text-center w-60 lg:text-start">
           <h2>ISP</h2>
-          <p>{ipResults.org}</p>
+          <p>{ipResults.isp}</p>
         </div>
       </div>
     </section>

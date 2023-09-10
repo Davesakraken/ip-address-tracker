@@ -7,11 +7,9 @@ export default function SearchBar() {
 
   const isMobile = useMediaQuery({ minWidth: 1150 });
 
-  const HandleClick = () => {
-    if (!search) {
-      alert("please provide an ip");
-      return;
-    } else {
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      e.preventDefault(); // Prevent form submission if this input is inside a form
       handleApiCall();
     }
   };
@@ -26,8 +24,9 @@ export default function SearchBar() {
         onChange={(e) => {
           setSearch(e.currentTarget.value);
         }}
+        onKeyDown={handleKeyDown}
       />
-      <button onClick={HandleClick} className="w-12 flex justify-center items-center bg-black hover:bg-slate-700" type="submit">
+      <button onClick={handleApiCall} className="w-12 flex justify-center items-center bg-black hover:bg-slate-700" type="submit">
         <IconArrowSvg />
       </button>
     </section>
