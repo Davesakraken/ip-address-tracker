@@ -1,11 +1,11 @@
 import Head from "next/head";
 import dynamic from "next/dynamic";
-import SearchBar from "@/components/SearchBar";
-import ResultsPanel from "@/components/ResultsPanel";
+import SearchBar from "@/Components/SearchBar";
+import ResultsPanel from "@/Components/ResultsPanel";
 import { IpSearchProvider } from "@/hooks/ipSearchContext";
 import { AttributionControl } from "react-leaflet";
-import Attribution from "@/components/Attribution";
-const Map = dynamic(() => import("@/components/Map"), {
+import Attribution from "@/Components/Attribution";
+const Map = dynamic(() => import("@/Components/Map"), {
   ssr: false,
 });
 

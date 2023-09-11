@@ -1,4 +1,4 @@
-import { IconArrowSvg } from "@/components/svgs";
+import { IconArrowSvg } from "@/Components/svgs";
 import { useIpSearch } from "@/hooks/ipSearchContext";
 
 export default function SearchBar() {

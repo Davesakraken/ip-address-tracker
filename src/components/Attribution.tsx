@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { InformationSvg } from "./svgs";
+import { InformationSvg } from "@/Components/svgs";
 
 export default function Attribution() {
   const [visable, setVisable] = useState(false);
@@ -9,7 +9,6 @@ export default function Attribution() {
     const AttributionTimer = setTimeout(() => {
       setVisable(false);
     }, 7000);
-
     const animationTimerIn = setTimeout(() => {
       setAnimateOut(true);
     }, 6000);
@@ -17,7 +16,6 @@ export default function Attribution() {
       setAnimateOut(false);
     }, 7000);
 
-    console.log(`animateOut: ${animateOut}, visable: ${visable}`);
     return () => {
       clearTimeout(AttributionTimer), clearTimeout(animationTimerIn), clearTimeout(animationTimerOut);
     };
