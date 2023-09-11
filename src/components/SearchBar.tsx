@@ -14,7 +14,7 @@ export default function SearchBar() {
   return (
     <section className="flex h-12 rounded-xl overflow-clip">
       <input
-        className="w-[70vw] sm:w-[17rem] p-4 md:w-[30rem]"
+        className="w-[70vw] sm:w-[17rem] text-sm p-4 md:w-[30rem] md:text-base"
         type="text"
         placeholder={"Search for any IP address or domain"}
         value={search}

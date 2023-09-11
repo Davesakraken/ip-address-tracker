@@ -40,6 +40,10 @@ input {
     outline: none;
 }
 
+input::placeholder {
+    font: 1rem/2;
+}
+
 /* mapContainer */
 
 .leaflet-container {
