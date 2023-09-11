@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { InformationSvg } from "@/Components/svgs";
+import { InformationSvg } from "../Components/svgs";
 
 export default function Attribution() {
   const [visable, setVisable] = useState(false);
