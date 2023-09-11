@@ -48,7 +48,6 @@ export function IpSearchProvider({ children }: PropsWithChildren) {
   // Api call within context rather then as a hook as we can declare state
   const handleApiCall = async () => {
     const data = await FetchLocationData(search);
-    console.log("Data:", data);
     if (data.code) {
       alert("input correct domain or ip address");
     } else {

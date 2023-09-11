@@ -17,6 +17,7 @@ export async function FetchLocationData(usrInput: string) {
   const ipApiUrl = `https://geo.ipify.org/api/v2/country,city?apiKey=at_6VTJpukBLamPHTQwEaGGc5Pwj9tjn&ipAddress=${usrInput}&domain=${usrInput}`;
 
   const response = await fetch(ipApiUrl);
+
   const ipDetails = await response.json();
   return ipDetails as FetchLocationDataInterface;
 }
