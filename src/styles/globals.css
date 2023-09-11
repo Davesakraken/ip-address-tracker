@@ -35,6 +35,10 @@ p {
     color: var(--DarkGray);
 }
 
+a {
+    color: rgb(33, 39, 218);
+}
+
 input {
     border: none;
     outline: none;

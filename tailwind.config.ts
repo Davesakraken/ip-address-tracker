@@ -12,8 +12,35 @@ const config: Config = {
       backgroundImage: {
         banner: "url(/pattern-bg-desktop.png)",
       },
+      animation: {
+        "slide-in-bottom": "slide-in-bottom 1s ease-in-out both",
+        "fade-in-fwd": "fade-in-fwd 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both",
+      },
+      keyframes: {
+        "slide-in-bottom": {
+          "0%": {
+            transform: "translateY(20px)",
+            opacity: "0",
+          },
+          "100%": {
+            transform: "translateY(0)",
+            opacity: "1",
+          },
+        },
+        "fade-in-fwd": {
+          "0%": {
+            transform: "translateZ(-80px)",
+            opacity: "0",
+          },
+          "100%": {
+            transform: "translateZ(0)",
+            opacity: "1",
+          },
+        },
+      },
     },
   },
   plugins: [],
 };
+
 export default config;

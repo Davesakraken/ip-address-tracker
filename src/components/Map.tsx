@@ -40,9 +40,9 @@ export default function Map() {
     <MapContainer
       center={[ipResults.location.lat, ipResults.location.lng]}
       zoom={15}
-      scrollWheelZoom={false}
+      scrollWheelZoom={true}
       doubleClickZoom={false}
-      dragging={false}
+      dragging={true}
       zoomControl={false}
     >
       <TileLayer

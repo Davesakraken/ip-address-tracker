@@ -3,6 +3,8 @@ import dynamic from "next/dynamic";
 import SearchBar from "@/components/SearchBar";
 import ResultsPanel from "@/components/ResultsPanel";
 import { IpSearchProvider } from "@/hooks/ipSearchContext";
+import { AttributionControl } from "react-leaflet";
+import Attribution from "@/components/Attribution";
 const Map = dynamic(() => import("@/components/Map"), {
   ssr: false,
 });
@@ -21,6 +23,7 @@ export default function Home() {
             <ResultsPanel />
           </header>
           <main className="h-full">
+            <Attribution />
             <Map />
           </main>
         </div>
