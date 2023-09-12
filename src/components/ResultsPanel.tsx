@@ -4,10 +4,10 @@ export default function ResultsPanel() {
   const { ipResults } = useIpSearch();
 
   // breakStyles
-  const mainContainerLg = "lg:bottom-[-25%] lg:h-40 lg:w-[70rem]";
-  const mainContainerMd = "md:w-[37rem] md:h-[14rem] md:bottom-[-35%]";
+  const mainContainerLg = "lg:bottom-[-30%] lg:h-40 lg:w-[70rem]";
+  const mainContainerMd = "md:w-[37rem] md:h-[14rem] md:bottom-[-55%]";
   const mainContainerSm = "sm:w-[20rem]";
-  const mainContainerDefaults = "w-[90vw] h-[18rem] bottom-[-50%]";
+  const mainContainerDefaults = "w-[90vw] h-[17rem] bottom-[-70%]";
 
   return (
     //  outter container

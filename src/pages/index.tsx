@@ -16,7 +16,7 @@ export default function Home() {
       </Head>
       <IpSearchProvider>
         <div className="flex flex-col h-[100vh]">
-          <header className="relative flex flex-col items-center pt-6 w-full h-[30rem] bg-banner bg-cover">
+          <header className="relative flex flex-col items-center pt-6 w-full h-[24rem] bg-banner bg-cover">
             <h1 className="text-center pb-5">IP Address Tracker</h1>
             <SearchBar />
             <ResultsPanel />

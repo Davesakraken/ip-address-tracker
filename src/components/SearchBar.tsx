@@ -12,9 +12,9 @@ export default function SearchBar() {
   };
 
   return (
-    <section className="flex h-12 rounded-xl overflow-clip">
+    <section className="flex h-[58px] rounded-2xl overflow-clip">
       <input
-        className="w-[70vw] sm:w-[17rem] text-sm p-4 md:w-[30rem] md:text-base"
+        className="w-[70vw] sm:w-[17rem] text-sm p-4 md:w-[531px] md:text-base"
         type="text"
         placeholder={"Search for any IP address or domain"}
         value={search}
@@ -23,7 +23,7 @@ export default function SearchBar() {
         }}
         onKeyDown={handleKeyDown}
       />
-      <button onClick={handleApiCall} className="w-12 flex justify-center items-center bg-black hover:bg-slate-700" type="submit">
+      <button onClick={handleApiCall} className="w-14 flex justify-center items-center bg-black hover:bg-slate-700" type="submit">
         <IconArrowSvg />
       </button>
     </section>

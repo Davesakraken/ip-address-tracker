@@ -23,14 +23,14 @@ h1 {
 }
 
 h2 {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     letter-spacing: 2px;
     font-weight: 500;
     color: var(--Gray)
 }
 
 p {
-    font-size: 1.3rem;
+    font-size: 1.40rem;
     font-weight: 500;
     color: var(--DarkGray);
 }

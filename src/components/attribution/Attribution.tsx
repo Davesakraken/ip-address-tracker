@@ -7,7 +7,7 @@ export default function Attribution() {
   useEffect(() => {
     const animationTimeout = setTimeout(() => {
       setVisible(false);
-    }, 10000);
+    }, 7000);
 
     return () => clearTimeout(animationTimeout);
   }, [visible]);

@@ -14,7 +14,7 @@ const config: Config = {
       },
       animation: {
         "fade-in": "fade-in 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000)",
-        "slide-in-out": "slide-in-out 10s ease-in-out 1",
+        "slide-in-out": "slide-in-out 7s ease-in-out 1",
       },
       keyframes: {
         "slide-in-out": {
