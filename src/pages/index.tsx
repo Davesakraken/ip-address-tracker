@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 import SearchBar from "@/components/SearchBar";
 import ResultsPanel from "@/components/ResultsPanel";
 import { IpSearchProvider } from "@/hooks/ipSearchContext";
-import Attribution from "@/components/Attribution";
+import Attribution from "@/components/attribution/Attribution";
 const Map = dynamic(() => import("@/components/Map"), {
   ssr: false,
 });
