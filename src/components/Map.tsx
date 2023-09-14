@@ -6,6 +6,7 @@ import MarkerShadow from "leaflet/dist/images/marker-shadow.png";
 import { Icon } from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { useIpSearch } from "@/hooks/ipSearchContext";
+import { useMediaQuery } from "react-responsive";
 
 const icon = new Icon({
   iconUrl: MarkerIcon.src,
@@ -21,6 +22,10 @@ const icon = new Icon({
 // proxy component. Needs to be within the mapContainer provider below to run as useMap is a hook only avilable within that context.
 function MapControl({ lat, lon }: { lat: number; lon: number }) {
   const map = useMap();
+
+  const isMobile = useMediaQuery({
+    query: "(min-width: 661px)",
+  });
 
   useEffect(() => {
     map.setView([lat, lon]);
