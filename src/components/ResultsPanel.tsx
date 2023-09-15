@@ -3,16 +3,16 @@ import { useIpSearch } from "@/hooks/ipSearchContext";
 export default function ResultsPanel() {
   const { ipResults } = useIpSearch();
 
-  // breakStyles
-  const mainContainerLg = "lg:bottom-[-30%] lg:h-40 lg:w-[70rem]";
-  const mainContainerMd = "md:w-[37rem] md:h-[14rem] md:bottom-[-55%]";
+  // BreakPoints
+  const mainContainerLg = "lg:w-[70rem] lg:h-40 ";
+  const mainContainerMd = "md:w-[37rem] md:h-[14rem] md:translate-y-1/2";
   const mainContainerSm = "sm:w-[20rem]";
-  const mainContainerDefaults = "w-[90vw] h-[17rem] bottom-[-70%]";
+  const mainContainerDefaults = "w-[90vw] bottom-0 translate-y-2/3";
 
   return (
     //  outter container
     <section
-      className={`${mainContainerDefaults} ${mainContainerSm} ${mainContainerMd} ${mainContainerLg} rounded-2xl bg-white absolute shadow-xl `}
+      className={`${mainContainerDefaults} ${mainContainerSm} ${mainContainerMd} ${mainContainerLg} translate-y-2/3 rounded-2xl bg-white absolute shadow-xl `}
     >
       {/* inner container */}
       <div className="flex flex-wrap justify-center h-full p-4 md:p-9">
